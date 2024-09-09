@@ -3,11 +3,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-<<<<<<< HEAD
-
-=======
     scroll-behavior: smooth;
->>>>>>> 803332e53206fa19e60f54b74fe4b46bafd9ef84
 }
 
 canvas#backgroundCanvas {
@@ -16,7 +12,7 @@ canvas#backgroundCanvas {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Isso mantém o canvas atrás do conteúdo */
+    z-index: -10; 
     pointer-events: none; /* Impede que o canvas bloqueie interações */
 }
 
@@ -33,7 +29,6 @@ canvas#backgroundCanvas {
 /*  Header   */
 .header {
     height: 90px;
-<<<<<<< HEAD
     width: 80%;
     background-color: rba(255, 255, 255, 0.118);
     z-index: 1;
@@ -44,7 +39,6 @@ canvas#backgroundCanvas {
     justify-content: space-between; /* Distribui os elementos de forma igual */
     align-items: center;
     padding: 0 20px; /* Espaço interno */
-=======
     width: 1200px;
     background-color: rgba(60, 60, 60, 0.5);
     z-index: 1000; /* Garante que o header fique sobre outros elementos */
@@ -61,7 +55,6 @@ canvas#backgroundCanvas {
     padding: 0 20px; /* Adiciona espaçamento interno, se necessário */
     margin-top: 36px;
     backdrop-filter: blur(15px); /* Aplica o efeito de blur */
->>>>>>> 803332e53206fa19e60f54b74fe4b46bafd9ef84
 }
 
 .titulo {
@@ -88,7 +81,6 @@ canvas#backgroundCanvas {
     color: white;
     text-decoration: none;
     margin: 0% 30px; /* Espaço entre os links */
-    font-size: ;
     font-family: 'inter';
     position: relative;
     transition: ease-in-out 0.2s;
@@ -153,24 +145,9 @@ canvas#backgroundCanvas {
     margin-top: 80px;
 }
 
-/* Centraliza a palavra no centro da tela */
-.texto {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1;
-    width: 100%;
-}
 
-.texto .word {
-    display: inline-block;
-    font-weight: bold;
-    color: #ffffff;
-    /* Outros estilos que desejar */
-}
 
+/* gradiente titulos */
 .word {
     text-transform: uppercase;
     background-image: linear-gradient(
@@ -188,33 +165,10 @@ canvas#backgroundCanvas {
     display: inline-block;
     animation: textclip 2s linear infinite;
 }
-
-
-
-/* Animação de gradiente */
 @keyframes textclip {
     to {
         background-position: -200% center;
     }
-}
-/* Animação de gradiente */
-
-.image-gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 0;
-    z-index: 1;
-}
-
-.image-gallery img {
-    width: 80%;
-    height: auto;
-    margin-bottom: 50px;
-    border: 5px solid #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
 }
 
 .subtitulo{
@@ -242,218 +196,6 @@ canvas#backgroundCanvas {
     background-color: #585858; /* Barrinha vermelha mais escura ao passar o mouse */
 }
 
-.scroll-btn {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    translate: -50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 180px;
-    height: 50px;
-    gap: 5px;
-    text-decoration: none;
-    color: #ffffff; /* Letra branca */
-    border-radius: 10px;
-    border: 2px solid #ffffff; /* Linha branca em volta do botão */
-    top: 550px;
-    font-family: 'orbitron';
-}
-
- .scroll-btn i{
-     font-size: 20px;
- }
-
- .cards-section {
-    display: flex;
-    justify-content: center; /* Centraliza os cards horizontalmente */
-    align-items: center; /* Centraliza os cards verticalmente dentro do contêiner */
-    margin: 850px auto 50px auto; /* Aumenta o espaçamento superior para mover a seção para baixo */
-    gap: 40px; /* Espaçamento entre os cards */
-    width: 100%;
-    
-}
-
-
-.cards-section .card {
-    background-color: #2C2C2C;
-    border: 1px solid #ff0000; /* Borda vermelha */
-    border-radius: 5px;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    width: 300px;
-    height: 300px;
-    align-items: center;
-    z-index: 1;
-    box-sizing: border-box; /* Inclui a borda dentro das dimensões */
-}
-
-.cards-section .card h2 {
-    font-size: 4rem;
-    margin: 60px 0 0;
-    font-family: 'orbitron';
-}
-
-.cards-section .card p {
-    margin: 20px 0 0;
-    font-size: 1.2rem;
-    font-family: 'poppins';
-}
-
-.image-end-section {
-    margin-top: 30px; /* Espaçamento entre os cards e a imagem */
-    width: 75%; /* Ajusta a largura da imagem ao tamanho da seção */
-    height: auto; /* Mantém a proporção da imagem */
-    align-items: center;
-    z-index: 1;
-    margin: 100px auto 50px auto; /* Aumenta o espaçamento superior para mover a seção para baixo */
-}
-
-.subtitulo2{
-    z-index: 1;
-    font-size: 1.3rem;
-    color: white;
-    font-family: 'poppins';
-    text-align: center;
-    margin: 50px auto; /* Aumenta o espaçamento superior para mover a seção para baixo */
-    margin-top: 0px;
-}
-
-.principal2 {
-    color: white;
-    font-family: 'orbitron';
-    font-size: 4.5rem;
-    margin: 50px auto;
-    margin-top: 190px;
-}
-
-/* Estilos para a seção de convites */
-.convites-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin-top: 40px;
-    padding: 20px; /* Espaçamento interno */
-    border-radius: 10px; /* Borda arredondada */
-    margin: 50px auto;
-    width: 100%;
-    z-index: 1;
-}
-
-.convite {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
-    padding: 20px 40px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 1200px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    border-top: none;
-    border-bottom: 1px solid #333;
-    position: relative;
-    backdrop-filter: blur(15px); /* Aplica o efeito de blur */
-}
-
-.convite:first-child {
-    border-top: 1px solid #333;
-}
-
-.convite .data {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 160px; 
-    font-weight: bold;
-    color: #e5e5e5;
-}
-
-.convite .data .mes {
-    font-size: 20px;
-    color: #ccc;
-    font-family: 'orbitron';
-}
-
-.convite .data .dia {
-    font-size: 160px;
-    font-family: 'inter';
-}
-
-.convite .detalhes {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    margin-left: 20px;
-    flex-grow: 1;
-}
-
-.convite .detalhes p {
-    margin: 0;
-    font-size: 18px;
-    color: #ccc;
-    font-family: 'orbitron';
-    margin-bottom: 105px;
-    margin: 50px auto;
-    text-align: center;
-}
-
-.convite .detalhes .subtitulo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    margin-top: 115px;
-}
-
-.btn-evento {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    text-decoration: none;
-    width: 180px;
-    font-family: 'orbitron';
-}
-
-.btn-evento i {
-    margin-right: 10px;
-}
-
-.btn-evento:hover {
-    background-color: #fff;
-    color: #111;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .convite {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .convite .detalhes {
-        align-items: center;
-        margin-left: 0;
-    }
-
-    .convite .data {
-        font-size: 72px;
-    }
-}
 
 #marginLateralPagina {
     margin: 0 auto; /* Centraliza horizontalmente */
