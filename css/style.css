@@ -1,0 +1,468 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+<<<<<<< HEAD
+
+=======
+    scroll-behavior: smooth;
+>>>>>>> 803332e53206fa19e60f54b74fe4b46bafd9ef84
+}
+
+canvas#backgroundCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Isso mantém o canvas atrás do conteúdo */
+    pointer-events: none; /* Impede que o canvas bloqueie interações */
+}
+
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/*  Fim  da bolha vermelha */
+
+
+/*  Header   */
+.header {
+    height: 90px;
+<<<<<<< HEAD
+    width: 80%;
+    background-color: rba(255, 255, 255, 0.118);
+    z-index: 1;
+    font-family: 'orbitron';
+    margin: 36px auto 0; /* Centraliza horizontalmente */
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos de forma igual */
+    align-items: center;
+    padding: 0 20px; /* Espaço interno */
+=======
+    width: 1200px;
+    background-color: rgba(60, 60, 60, 0.5);
+    z-index: 1000; /* Garante que o header fique sobre outros elementos */
+    font-family: 'Orbitron', sans-serif;
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+    border-radius: 15px;
+    align-items: center;
+    display: flex;
+    position: fixed; /* Fixa o header no topo da página */
+    top: 0; /* Alinha o header no topo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para a centralização correta */
+    padding: 0 20px; /* Adiciona espaçamento interno, se necessário */
+    margin-top: 36px;
+    backdrop-filter: blur(15px); /* Aplica o efeito de blur */
+>>>>>>> 803332e53206fa19e60f54b74fe4b46bafd9ef84
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    letter-spacing: 2px;
+    flex: 1; /* Faz a largura se ajustar automaticamente */
+    text-align: center; /* Centraliza o texto dentro do espaço */
+}
+
+.mundo {
+    color: #FB0F0F;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around; /* Centraliza os links */
+     /* Ajusta para ocupar mais espaço */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0% 30px; /* Espaço entre os links */
+    font-size: ;
+    font-family: 'inter';
+    position: relative;
+    transition: ease-in-out 0.2s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #ff0000;
+    transition: width 0.4s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.btnShare {
+    flex: 1; /* Ocupa um espaço proporcional */
+    display: flex;
+    justify-content: center; /* Alinha à direita */
+}
+
+.share-button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 3px solid #FB0F0F;
+    transition: 0.1s ease-in-out;
+}
+
+.share-button:hover {
+    background-color: #FB0F0F;
+}
+
+.partilhar {
+    height: 20px;
+    width: auto;
+    margin-right: 13px;
+}
+
+/*  O ULTIMO PROJETO   */
+
+.principal {
+    color: white;
+    font-family: 'orbitron';
+    font-size:4.5rem;
+    margin: 0;
+    margin-top: 80px;
+}
+
+/* Centraliza a palavra no centro da tela */
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+}
+
+.texto .word {
+    display: inline-block;
+    font-weight: bold;
+    color: #ffffff;
+    /* Outros estilos que desejar */
+}
+
+.word {
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        -225deg,
+        #e05050 0%,
+        #ff0000 29%,
+        #841515 67%,
+        #ff0000 100%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff; 
+    display: inline-block;
+    animation: textclip 2s linear infinite;
+}
+
+
+
+/* Animação de gradiente */
+@keyframes textclip {
+    to {
+        background-position: -200% center;
+    }
+}
+/* Animação de gradiente */
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    z-index: 1;
+}
+
+.image-gallery img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 50px;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+.subtitulo{
+    z-index: 1;
+    font-size: 1.3rem;
+    color: white;
+    font-family: 'poppins';
+}
+
+/* Estilos da barra de rolagem (scrollbar) */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background: #230000; /* Fundo preto com muita transparência */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff0000; /* Barrinha vermelha */
+    border-radius: 5px; /* Arredonda os cantos da barrinha */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #585858; /* Barrinha vermelha mais escura ao passar o mouse */
+}
+
+.scroll-btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    gap: 5px;
+    text-decoration: none;
+    color: #ffffff; /* Letra branca */
+    border-radius: 10px;
+    border: 2px solid #ffffff; /* Linha branca em volta do botão */
+    top: 550px;
+    font-family: 'orbitron';
+}
+
+ .scroll-btn i{
+     font-size: 20px;
+ }
+
+ .cards-section {
+    display: flex;
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    align-items: center; /* Centraliza os cards verticalmente dentro do contêiner */
+    margin: 850px auto 50px auto; /* Aumenta o espaçamento superior para mover a seção para baixo */
+    gap: 40px; /* Espaçamento entre os cards */
+    width: 100%;
+    
+}
+
+
+.cards-section .card {
+    background-color: #2C2C2C;
+    border: 1px solid #ff0000; /* Borda vermelha */
+    border-radius: 5px;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    z-index: 1;
+    box-sizing: border-box; /* Inclui a borda dentro das dimensões */
+}
+
+.cards-section .card h2 {
+    font-size: 4rem;
+    margin: 60px 0 0;
+    font-family: 'orbitron';
+}
+
+.cards-section .card p {
+    margin: 20px 0 0;
+    font-size: 1.2rem;
+    font-family: 'poppins';
+}
+
+.image-end-section {
+    margin-top: 30px; /* Espaçamento entre os cards e a imagem */
+    width: 75%; /* Ajusta a largura da imagem ao tamanho da seção */
+    height: auto; /* Mantém a proporção da imagem */
+    align-items: center;
+    z-index: 1;
+    margin: 100px auto 50px auto; /* Aumenta o espaçamento superior para mover a seção para baixo */
+}
+
+.subtitulo2{
+    z-index: 1;
+    font-size: 1.3rem;
+    color: white;
+    font-family: 'poppins';
+    text-align: center;
+    margin: 50px auto; /* Aumenta o espaçamento superior para mover a seção para baixo */
+    margin-top: 0px;
+}
+
+.principal2 {
+    color: white;
+    font-family: 'orbitron';
+    font-size: 4.5rem;
+    margin: 50px auto;
+    margin-top: 190px;
+}
+
+/* Estilos para a seção de convites */
+.convites-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+    margin: 50px auto;
+    width: 100%;
+    z-index: 1;
+}
+
+.convite {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-top: none;
+    border-bottom: 1px solid #333;
+    position: relative;
+    backdrop-filter: blur(15px); /* Aplica o efeito de blur */
+}
+
+.convite:first-child {
+    border-top: 1px solid #333;
+}
+
+.convite .data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 160px; 
+    font-weight: bold;
+    color: #e5e5e5;
+}
+
+.convite .data .mes {
+    font-size: 20px;
+    color: #ccc;
+    font-family: 'orbitron';
+}
+
+.convite .data .dia {
+    font-size: 160px;
+    font-family: 'inter';
+}
+
+.convite .detalhes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.convite .detalhes p {
+    margin: 0;
+    font-size: 18px;
+    color: #ccc;
+    font-family: 'orbitron';
+    margin-bottom: 105px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.convite .detalhes .subtitulo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 115px;
+}
+
+.btn-evento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    width: 180px;
+    font-family: 'orbitron';
+}
+
+.btn-evento i {
+    margin-right: 10px;
+}
+
+.btn-evento:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .convite {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .convite .detalhes {
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .convite .data {
+        font-size: 72px;
+    }
+}
+
+#marginLateralPagina {
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px; /* Limita a largura máxima */
+    width: 100%; /* Garante que ocupe 100% da largura disponível */
+}
+

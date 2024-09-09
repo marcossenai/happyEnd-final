@@ -1,0 +1,142 @@
+.share-button {
+    display: flex;
+    align-items: center;
+    background-color: #FB0F0F;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 60px;
+    position: relative;
+    transition: 1s box-shadow;
+}
+
+.share-button:hover {
+    background-color: #CC0000;
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+
+.share-button:hover::before, .share-button:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FDA8CF;
+    border-radius: 15px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+}
+
+.share-button:hover:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;    
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;    
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;    
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;    
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;    
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;    
+  }
+}
+
+
+
+
+código background gradiente.js:
+
+function render() {
+  // Criar um gradiente linear da esquina superior esquerda para a inferior direita
+  var gradient = context.createLinearGradient(0, 0, canvas.width, canvas.height);
+  
+  // Adicionar cores ao gradiente
+  gradient.addColorStop(0, "#000000"); // Preto no início
+  gradient.addColorStop(0.5, "#2C0000"); // Vermelho escuro no meio
+  gradient.addColorStop(1, "#600000"); // Vermelho no final
+
+  // Definir o gradiente como o fundo
+  context.fillStyle = gradient;
+  context.fillRect(0, 0, canvas.width, canvas.height); // Preencher o fundo com o gradiente
+
+  // Desenhar e mover os pontos
+  for (var i = 0; i < dotCount; i++) {
+    dots[i].draw();
+    dots[i].move();
+  }
+  
+  // Continuar a animação
+  requestAnimationFrame(render);
+}

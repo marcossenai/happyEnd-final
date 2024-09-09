@@ -1,0 +1,15 @@
+
+@font-face {
+    font-family: 'orbitron';
+    src: url(../fonts/orbitron/Orbitron-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url(../fonts/inter/Inter_18pt-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}

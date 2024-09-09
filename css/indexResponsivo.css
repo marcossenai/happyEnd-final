@@ -1,0 +1,44 @@
+/* Estilo padrão para menu
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: #000;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mobile-menu a {
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+@media (max-width: 1200px) {
+    .mobile-menu.active {
+        display: flex;
+    }
+} */
