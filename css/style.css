@@ -27,36 +27,49 @@ canvas#backgroundCanvas {
     --corVermelhaTxt: #FB0F0F;
     --corBrancaTxt: #fff;
 }
+.red {
+    color: var(--corVermelhaTxt);
+}
 
-/*  Fim  da bolha vermelha */
-
+.marginPagina {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0% 10%;
+}
 
 /*  Header   */
 .header {
     height: 90px;
-    width: 80%;
     z-index: 1;
     border-radius: 15px;
     display: flex;
     align-items: center;
-    font-family: 'orbitron';
     background-color: rgba(60, 60, 60, 0.5);
-    position: fixed; /* Fixa o header no topo da página */
-    backdrop-filter: blur(15px); /* Aplica o efeito de blur */
+    position: fixed; 
+    top: 5%;
+    backdrop-filter: blur(15px); 
+    justify-content: space-between;
 }
 
-.titulo {
+.icon {
+    width: 24px;
+}
+#txtShare {
+    margin-left: 10px;
+}
+
+.btnShare {
     display: flex;
+    background: none;
+    border: var(--corVermelhaTxt) 3px solid;
+    border-radius: 10px;
+    align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 28px;
-    letter-spacing: 2px;
-    flex: 1; /* Faz a largura se ajustar automaticamente */
-    text-align: center; /* Centraliza o texto dentro do espaço */
+    padding: 0px 1%;
 }
-
-.mundo {
-    color: #FB0F0F;
+.btnShare, .tituloHeader {
+    margin: 0px 30px;
 }
 
 .nav-links {

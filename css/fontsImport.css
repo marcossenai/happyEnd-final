@@ -13,3 +13,13 @@
     font-family: 'poppins';
     src: url(../fonts/Poppins/Poppins-Medium.ttf);
 }
+
+h1, h2, h3, p {
+    color: var(--corBrancaTxt);
+}
+h1, h2, h3 {
+    font-family: 'orbitron';
+}
+p {
+    font-family: 'inter';
+}
