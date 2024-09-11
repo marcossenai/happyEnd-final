@@ -5,21 +5,17 @@
 }
 
 @font-face {
-    font-family: 'inter';
-    src: url(../fonts/inter/Inter_18pt-Medium.ttf);
-}
-
-@font-face {
     font-family: 'poppins';
     src: url(../fonts/Poppins/Poppins-Medium.ttf);
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, a {
     color: var(--corBrancaTxt);
 }
 h1, h2, h3 {
     font-family: 'orbitron';
 }
-p {
-    font-family: 'inter';
+p, a {
+    font-family: 'poppins';
+    font-size: 1rem;
 }

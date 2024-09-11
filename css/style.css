@@ -26,6 +26,7 @@ canvas#backgroundCanvas {
 :root {
     --corVermelhaTxt: #FB0F0F;
     --corBrancaTxt: #fff;
+    --corVermelhaEscura: #990000;
 }
 .red {
     color: var(--corVermelhaTxt);
@@ -49,30 +50,68 @@ canvas#backgroundCanvas {
     border-radius: 15px;
     display: flex;
     align-items: center;
-    background-color: rgba(60, 60, 60, 0.5);
+    background-color: rgba(18, 18, 18, 0.75);
     position: fixed; 
     top: 5%;
-    backdrop-filter: blur(15px); 
+    backdrop-filter: blur(10px); 
     justify-content: space-between;
 }
 
 .icon {
     width: 24px;
 }
+
+#btnSaibaMais {
+    background-color: #fff;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    transition: 200ms ease-in-out;  
+}
+#txtSaibaMais {
+    color: #000;
+    font-size: 20px;
+    transition: 200ms ease-in-out; 
+}
+#btnSaibaMais:hover {
+    background-color: #ff0000;
+}
+#btnSaibaMais:hover #txtSaibaMais {
+    color: #fff;
+}
+
+.iconSaibaMais {
+    background-image: url("../images/iconSaibaMaisBefore.png");
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    transition: 200ms ease-in-out; 
+}
+#btnSaibaMais:hover .iconSaibaMais {
+    background-image: url("../images/iconSaibaMaisAfter.png");
+}
+
 .txtBtn {
+    margin: 10px;
     margin-left: 10px;
 }
 
 .btn {
     display: flex;
     background: none;
-    border: var(--corBrancaTxt) 3px solid;
-    border-radius: 10px;
+    border: var(--corBrancaTxt) 2px solid;
+    border-radius: 15px;
     align-items: center;
     justify-content: center;
     padding: 0px 1%;
+    width: 200px;
 }
 .btnShare {
+    border-color: var(--corBrancaTxt);
+    transition: 400ms;
+}
+
+.btn:hover {
     border-color: var(--corVermelhaTxt);
 }
 
@@ -90,7 +129,6 @@ canvas#backgroundCanvas {
     color: white;
     text-decoration: none;
     margin: 0% 30px; /* Espaço entre os links */
-    font-family: 'inter';
     position: relative;
     transition: ease-in-out 0.2s;
 }
@@ -117,6 +155,7 @@ canvas#backgroundCanvas {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
