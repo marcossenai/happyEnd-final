@@ -27,7 +27,16 @@ canvas#backgroundCanvas {
     --corVermelhaTxt: #FB0F0F;
     --corBrancaTxt: #fff;
     --corVermelhaEscura: #990000;
+    --corBgCards: #1d1d1d;
 }
+
+.titleSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .red {
     color: var(--corVermelhaTxt);
 }
@@ -105,7 +114,9 @@ canvas#backgroundCanvas {
     justify-content: center;
     padding: 0px 1%;
     width: 200px;
+    height: 50px;
     transition: 400ms;
+    color: var(--corBrancaTxt);
 }
 .btnShare {
     border-color: var(--corBrancaTxt);
@@ -173,6 +184,40 @@ canvas#backgroundCanvas {
     font-family: 'poppins';
 }
 
+/* ----------------------------- calendario eventos ----------------------------- */
+
+
+.calendarContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 10%;
+    justify-content: space-between;
+}
+
+.calendarBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--corBgCards);
+    width: 35%;
+    aspect-ratio: 1 / 1;
+    
+    min-width: 200px;
+    padding: 20px;
+}
+.boxSalaCalendar {
+    width: 80%;
+}
+.calendarTitle {
+    /* esta também linkado com .principal por eficiencia */
+    margin: 0;
+    font-size:6rem;
+    font-family: "poppins";
+}
+
+
+/*----------------------------- localização ----------------------------- */
 #location {
     display: flex;
     flex-direction: row;

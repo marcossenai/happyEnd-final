@@ -9,6 +9,11 @@
     src: url(../fonts/Poppins/Poppins-Medium.ttf);
 }
 
+@font-face {
+    font-family: 'poppinsBold';
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
 h1, h2, h3, p, a {
     color: var(--corBrancaTxt);
 }
@@ -18,4 +23,8 @@ h1, h2, h3 {
 p, a {
     font-family: 'poppins';
     font-size: 1rem;
+}
+
+.poppinsBold {
+    font-family: 'poppinsBold';
 }
