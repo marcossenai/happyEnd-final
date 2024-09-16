@@ -6,6 +6,10 @@ html {
     scroll-behavior: smooth;
 }
 
+section {
+    margin-bottom: 20%;
+}
+
 canvas#backgroundCanvas {
     position: fixed;
     top: 0;
@@ -90,14 +94,14 @@ canvas#backgroundCanvas {
 }
 
 .iconSaibaMais {
-    background-image: url("../images/iconSaibaMaisBefore.png");
+    background-image: url("../images/icons/iconSaibaMaisBefore.png");
     width: 40px;
     height: 40px;
     background-position: center;
     transition: 200ms ease-in-out; 
 }
 #btnSaibaMais:hover .iconSaibaMais {
-    background-image: url("../images/iconSaibaMaisAfter.png");
+    background-image: url("../images/icons/iconSaibaMaisAfter.png");
 }
 
 .txtBtn {
@@ -207,6 +211,12 @@ canvas#backgroundCanvas {
     min-width: 200px;
     padding: 20px;
 }
+.calendarBoxLeft {
+    margin-right: 10px;
+}
+.calendarBoxRight {
+    margin-left: 10px;
+}
 
 .linhasSVG {
     display: block;
@@ -227,7 +237,7 @@ canvas#backgroundCanvas {
 .calendarTitle {
     /* esta também linkado com .principal por eficiencia */
     margin: 0;
-    font-size:6rem;
+    font-size:6em;
     font-family: "poppins";
 }
 
