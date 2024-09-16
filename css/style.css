@@ -198,6 +198,7 @@ canvas#backgroundCanvas {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     justify-content: center;
     background-color: var(--corBgCards);
     width: 35%;
@@ -206,6 +207,20 @@ canvas#backgroundCanvas {
     min-width: 200px;
     padding: 20px;
 }
+
+.linhasSVG {
+    display: block;
+    margin: 0 auto;
+}
+.linhaCaixa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none; /* Evita interferência no conteúdo */
+}
+
+
 .boxSalaCalendar {
     width: 80%;
 }
