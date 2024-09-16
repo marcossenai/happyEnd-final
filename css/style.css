@@ -105,10 +105,10 @@ canvas#backgroundCanvas {
     justify-content: center;
     padding: 0px 1%;
     width: 200px;
+    transition: 400ms;
 }
 .btnShare {
     border-color: var(--corBrancaTxt);
-    transition: 400ms;
 }
 
 .btn:hover {
