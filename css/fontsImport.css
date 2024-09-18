@@ -13,6 +13,10 @@
     font-family: 'poppinsBold';
     src: url(../fonts/Poppins/Poppins-Bold.ttf);
 }
+@font-face {
+    font-family: 'poppinsLight';
+    src: url(../fonts/Poppins/Poppins-Light.ttf);
+}
 
 h1, h2, h3, p, a {
     color: var(--corBrancaTxt);
@@ -27,4 +31,12 @@ p, a {
 
 .poppinsBold {
     font-family: 'poppinsBold';
+}
+
+p{
+    margin: 0;
+}
+
+h1{
+    margin: 0;
 }

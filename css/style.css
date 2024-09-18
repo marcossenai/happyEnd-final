@@ -74,6 +74,12 @@ canvas#backgroundCanvas {
     width: 24px;
 }
 
+.iconCalendario{
+    width: 1.9375rem;
+    height: 1.9375rem;
+}
+
+
 #btnSaibaMais {
     background-color: #fff;
     border: none;
@@ -104,9 +110,18 @@ canvas#backgroundCanvas {
     background-image: url("../images/icons/iconSaibaMaisAfter.png");
 }
 
+.mes{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
 .txtBtn {
     margin: 10px;
     margin-left: 10px;
+    font-size: 1.25rem
 }
 
 .btn {
@@ -117,17 +132,45 @@ canvas#backgroundCanvas {
     align-items: center;
     justify-content: center;
     padding: 0px 1%;
-    width: 200px;
-    height: 50px;
+    width: 18.125rem;
+    height: 3.75rem;
     transition: 400ms;
     color: var(--corBrancaTxt);
+    margin-top: 25px;
+    transition: 0.3s ease-in-out; 
 }
 .btnShare {
-    border-color: var(--corBrancaTxt);
+    display: flex;
+    background: none;
+    border: var(--corBrancaTxt) 2px solid;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 1%;
+    width: 18.125rem;
+    height: 3.75rem;
+    transition: 400ms;
+    color: var(--corBrancaTxt);
+    margin-top: 25px;
+    transition: 0.3s ease-in-out; 
+}
+
+.btnShare:hover{
+    border-color: #FB0F0F;
 }
 
 .btn:hover {
-    border-color: var(--corVermelhaTxt);
+    background-color: #fff;
+    color: #000;
+}
+
+.btn:hover .txtBtn{
+    color: #000;
+}
+
+.btn:hover .iconCalendario {
+    filter: invert(1); 
+    transition: 0.3s ease-in-out; 
 }
 
 
@@ -181,11 +224,16 @@ canvas#backgroundCanvas {
     margin: 0;
     margin-top: 80px;
 }
+
 .subtitulo{
     z-index: 1;
     font-size: 1.3rem;
     color: white;
     font-family: 'poppins';
+}
+
+.poppinsBold{
+    font-size: 2.96656rem;
 }
 
 /* ----------------------------- calendario eventos ----------------------------- */
@@ -198,6 +246,20 @@ canvas#backgroundCanvas {
     justify-content: space-between;
 }
 
+.data{
+    font-size: 11.25rem;
+    font-family: 'poppins';
+    margin: -50px 0;
+}
+
+.classe{
+    font-size: 1.8435rem;
+}
+
+.dezembro{
+    font-size: 1.25rem;
+}
+
 .calendarBox {
     display: flex;
     flex-direction: column;
@@ -205,22 +267,26 @@ canvas#backgroundCanvas {
     position: relative;
     justify-content: center;
     background-color: var(--corBgCards);
-    width: 35%;
+    width: 26.8125rem;
+    height: 27.0625rem;
     aspect-ratio: 1 / 1;
     
     min-width: 200px;
     padding: 20px;
 }
 .calendarBoxLeft {
-    margin-right: 10px;
+    margin-right: 30px;
 }
 .calendarBoxRight {
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .linhasSVG {
     display: block;
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 2px;
 }
 .linhaCaixa {
     position: absolute;
@@ -240,6 +306,7 @@ canvas#backgroundCanvas {
     font-size:6em;
     font-family: "poppins";
 }
+
 
 
 /*----------------------------- localização ----------------------------- */
@@ -333,3 +400,7 @@ canvas#backgroundCanvas {
     width: 100%; /* Garante que ocupe 100% da largura disponível */
 }
 
+.tituloInfo{
+    font-size: 1.99231rem;
+    font-family: 'poppinsLight';
+}
