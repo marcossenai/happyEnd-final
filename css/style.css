@@ -74,11 +74,11 @@ canvas#backgroundCanvas {
     width: 24px;
 }
 
-.iconCalendario{
-    width: 1.9375rem;
-    height: 1.9375rem;
+.iconInvert{
+    width: 2rem;
+    height: 2rem;
 }
-
+    
 
 #btnSaibaMais {
     background-color: #fff;
@@ -137,7 +137,7 @@ canvas#backgroundCanvas {
     transition: 400ms;
     color: var(--corBrancaTxt);
     margin-top: 25px;
-    transition: 0.3s ease-in-out; 
+    transition: 200ms ease-in-out; 
 }
 .btnShare {
     display: flex;
@@ -168,7 +168,7 @@ canvas#backgroundCanvas {
     color: #000;
 }
 
-.btn:hover .iconCalendario {
+.btn:hover .iconInvert {
     filter: invert(1); 
     transition: 0.3s ease-in-out; 
 }
@@ -237,7 +237,11 @@ canvas#backgroundCanvas {
 }
 
 /* ----------------------------- calendario eventos ----------------------------- */
-
+.titleSVG-align {
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
 
 .calendarContainer {
     display: flex;
