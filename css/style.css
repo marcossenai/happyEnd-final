@@ -287,11 +287,20 @@ canvas#backgroundCanvas {
 
 .linhasSVG {
     display: block;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
     justify-content: center;
     align-items: center;
-    height: 2px;
 }
+.linhasSVG-horizontal {
+    height: 1px;
+}
+.linhasSVG-vertical {
+    width: 1px;
+}
+
+
 .linhaCaixa {
     position: absolute;
     top: 0;
