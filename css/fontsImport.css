@@ -33,6 +33,10 @@ p, a {
     font-family: 'poppinsBold';
 }
 
+.poppinsLight {
+    font-family: 'poppinsLight';
+}
+
 p{
     margin: 0;
 }

@@ -418,3 +418,48 @@ canvas#backgroundCanvas {
     font-size: 1.99231rem;
     font-family: 'poppinsLight';
 }
+
+
+/* ----------------------------- footer ---------------------------- */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid var(--corVermelhaTxt);
+    width: 100%;
+    z-index: 10;
+    background-color: rgb(0, 0, 0);
+    padding: 5% 0;
+}
+
+.divisionLine {
+    width: 80%;
+    height: 1px;
+    margin: 15px;
+    background-image: linear-gradient(to right, #3f3f3f, #fff, #3f3f3f);
+}
+
+.footerSection {
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.nav-footer {
+    margin-left: 50px;
+}
+.footerLinks {
+    flex-direction: column;
+    margin-top: 15px;
+}
+.footerLinks a {
+    margin: 10px 0;
+}
+.txtFooterMarginTop {
+    margin: 40px 0 20px 0;
+}
+
+.socialIcon {
+    text-decoration: none;
+    margin-left: 15px;
+}
