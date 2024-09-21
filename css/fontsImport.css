@@ -27,6 +27,7 @@ h1, h2, h3 {
 p, a {
     font-family: 'poppins';
     font-size: 1rem;
+    text-decoration: none;
 }
 
 .poppinsBold {
