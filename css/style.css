@@ -241,12 +241,13 @@ canvas#backgroundCanvas {
     display: flex;
     height: 100px;
     align-items: center;
+    justify-content: center;
 }
 
 .calendarContainer {
     display: flex;
     flex-direction: row;
-    margin: 0px 10%;
+    margin: 5% 10%;
     justify-content: space-between;
 }
 
@@ -271,11 +272,9 @@ canvas#backgroundCanvas {
     position: relative;
     justify-content: center;
     background-color: var(--corBgCards);
-    width: 26.8125rem;
-    height: 27.0625rem;
+    width: 27rem;
     aspect-ratio: 1 / 1;
     
-    min-width: 200px;
     padding: 20px;
 }
 .calendarBoxLeft {
@@ -285,28 +284,18 @@ canvas#backgroundCanvas {
     margin-left: 30px;
 }
 
+.calendarRowPosition {
+    display: flex;
+    flex-direction: row;
+}
+
 .linhasSVG {
     display: block;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    justify-content: center;
-    align-items: center;
 }
 .linhasSVG-horizontal {
     height: 1px;
-}
-.linhasSVG-vertical {
-    width: 1px;
-}
-
-
-.linhaCaixa {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    pointer-events: none; /* Evita interferência no conteúdo */
 }
 
 
@@ -318,6 +307,18 @@ canvas#backgroundCanvas {
     margin: 0;
     font-size:6em;
     font-family: "poppins";
+}
+.calendarMainContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+}
+.calendarDaysSVG-alignment {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 
