@@ -149,7 +149,6 @@ canvas#backgroundCanvas {
     align-items: center;
     justify-content: center;
     padding: 0px 1%;
-    width: 18.125rem;
     height: 3.75rem;
     transition: 400ms;
     color: var(--corBrancaTxt);
@@ -177,7 +176,7 @@ canvas#backgroundCanvas {
 
 
 .btnShare, .tituloHeader {
-    margin: 0px 30px;
+    margin: 0% 3%;
 }
 
 .nav-links {
@@ -188,7 +187,7 @@ canvas#backgroundCanvas {
 .nav-links a {
     color: white;
     text-decoration: none;
-    margin: 0% 30px; /* Espaço entre os links */
+    margin: 0% 3%; /* Espaço entre os links */
     position: relative;
     transition: ease-in-out 0.2s;
 }

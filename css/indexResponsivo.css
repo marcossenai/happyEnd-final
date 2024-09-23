@@ -1,4 +1,4 @@
-/* Estilo padrão para menu
+
 .nav-links {
     display: flex;
     gap: 15px;
@@ -41,4 +41,4 @@
     .mobile-menu.active {
         display: flex;
     }
-} */
+}
