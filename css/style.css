@@ -345,6 +345,8 @@ canvas#backgroundCanvas {
     display: flex;
     position: absolute;
     background-color: var(--corBgCardsLighter);
+    justify-content: center;
+    align-items: center;
     width: 75%;
     bottom: -10%;
     padding: 10% 0;
@@ -354,18 +356,12 @@ canvas#backgroundCanvas {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 80%;
     height: 100%;
-}
-.socialsProfessor {
-    display: flex;
-    width: 70%;
-    background-color: var(--corVermelhaEscura);
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin-top: 5%;
+    border: var(--corVermelhaTxt) 2px solid;
+    border-left: none;
+    border-right: none;
+    text-align: center;
 }
 .imgProfessor {
     width: 100%;
