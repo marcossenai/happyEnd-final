@@ -355,7 +355,7 @@ canvas#backgroundCanvas {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 85%;
     height: 100%;
     border: var(--corVermelhaTxt) 2px solid;
     border-left: none;
