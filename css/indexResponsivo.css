@@ -1,10 +1,22 @@
+@media (max-width: 1200px) {
 
-.nav-links {
-    display: flex;
-    gap: 15px;
+    /* ----------------- header -------------- */
+    .nav-linksHeader {
+        display: none;
+    }
+
+    /* ---------------- menuBurger????? ---------------- */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
 }
 
-.menu-toggle {
+
+/* .menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
@@ -25,20 +37,4 @@
 
 .mobile-menu a {
     display: block;
-}
-
-@media (max-width: 1200px) {
-    .nav-links {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-}
-
-@media (max-width: 1200px) {
-    .mobile-menu.active {
-        display: flex;
-    }
-}
+} */

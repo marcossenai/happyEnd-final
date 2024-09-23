@@ -187,7 +187,6 @@ canvas#backgroundCanvas {
 .nav-links a {
     color: white;
     text-decoration: none;
-    margin: 0% 3%; /* Espaço entre os links */
     position: relative;
     transition: ease-in-out 0.2s;
 }
@@ -204,6 +203,9 @@ canvas#backgroundCanvas {
 
 .nav-links a:hover::after {
     width: 100%;
+}
+.nav-linksHeader a {
+    margin: 0 4%; /* Espaço entre os links */
 }
 
 
@@ -231,6 +233,8 @@ canvas#backgroundCanvas {
     font-size: 1.3rem;
     color: white;
     font-family: 'poppins';
+    flex-wrap: wrap;
+    max-width: 650px;
 }
 
 .poppinsBold{
@@ -277,6 +281,7 @@ canvas#backgroundCanvas {
     aspect-ratio: 1 / 1;
     
     padding: 20px;
+    box-sizing: border-box;
 }
 .calendarBoxLeft {
     margin-right: 30px;
@@ -372,6 +377,14 @@ canvas#backgroundCanvas {
     display: flex;
     flex-direction: row;
 }
+@media (max-width: 1200px) { 
+    #location {
+        flex-direction: column-reverse;
+    }
+    #locationInfo {
+        width: 100%;
+    }
+}
 
 #locationInfo {
     display: flex;
@@ -380,10 +393,8 @@ canvas#backgroundCanvas {
     align-items: center;
     text-align: center;
     border: 2px solid var(--corVermelhaTxt);
-    padding: 3em;
-
-
-    height: 500px;
+    padding: 2em;
+    box-sizing: border-box;
 }
 
 #locationMap {
@@ -394,6 +405,8 @@ canvas#backgroundCanvas {
     border: 2px solid var(--corVermelhaTxt);
     padding: 2em;
     width: 100%;
+    height: 35rem;
+    box-sizing: border-box;  /* border-box faz com que a largura total n seja afetada por padding */
 }
 
 #map {
@@ -505,5 +518,5 @@ footer {
 
 .socialIcon {
     text-decoration: none;
-    margin-left: 15px;
+    margin: 0 20px;
 }
