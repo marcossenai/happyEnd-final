@@ -40,10 +40,28 @@
             <a href="#professores">Localização</a>
         </div>
 
-        <button class="btnShare">
+        <button class="btnShare" id="shareButton">
             <img src="../images/icons/compartilhar.png" class="icon iconShare">
             <p class="txtBtn" id="txtShare">Compartilhar</p>
+            <!-- script JS compartilhar site -->
+            <script>
+                document.getElementById("shareButton").addEventListener("click", function () {
+                    let linkSite = window.location.href;
+                    navigator.clipboard.writeText(linkSite);
+                    // Verifica se a API de compartilhamento está disponível no navegador
+                    if (navigator.share) {
+                        navigator.share({
+                            title: 'O Último Projeto',
+                            text: 'Presencie o último projeto da primeira turma SENAI - Ferraz de Vasconcelos',
+                            url: window.location.href // URL atual do site
+                        });
+                    } else {
+                        alert('A API de compartilhamento não é suportada neste dispositivo.');
+                    }
+                });
+            </script>
         </button>
+
     </div>
 
     <main class="marginPagina">
@@ -194,10 +212,18 @@
                 <h2 id="ourLocationTitle">Dias 03 e 06 de Dezembro</h2>
                 <p class="text27">SESI CE-240<br>Ferraz de Vasconcelos
                 </p>
-                <button class="btn">
+                <button class="btn" id="copyAdress">
                     <img src="../images/icons/iconLocal.png" class="iconInvert">
                     <p class="txtBtn">Copiar Endereço</p>
+                    <!-- script JS copiar endereço para área de transferencia -->
+                    <script>
+                        document.getElementById("copyAdress").addEventListener("click", function () {
+                            let endereco = "SESI - Ferraz de Vasconcelos, R. Francisco A Zeiler, 20 - Jardim Juliana, Ferraz de Vasconcelos - SP, 08502-310";
+                            navigator.clipboard.writeText(endereco);
+                        });
+                    </script>
                 </button>
+
             </div>
 
             <div id="locationMap">
