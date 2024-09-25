@@ -372,6 +372,7 @@ canvas#backgroundCanvas {
 }
 .imgProfessor {
     width: 100%;
+    pointer-events: none;
 }
 
 
