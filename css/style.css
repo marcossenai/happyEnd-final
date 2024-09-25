@@ -141,6 +141,7 @@ canvas#backgroundCanvas {
     color: var(--corBrancaTxt);
     margin-top: 25px;
     transition: 200ms ease-in-out; 
+    cursor: pointer;
 }
 .btnShare {
     display: flex;
@@ -155,6 +156,7 @@ canvas#backgroundCanvas {
     color: var(--corBrancaTxt);
     margin-top: 25px;
     transition: 0.3s ease-in-out; 
+    cursor: pointer;
 }
 
 .btnShare:hover{
