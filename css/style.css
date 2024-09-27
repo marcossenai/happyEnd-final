@@ -244,6 +244,26 @@ canvas#backgroundCanvas {
     font-size: 2.96656rem;
 }
 
+/* ------------------ video ------------------- */
+.video-wrapper {
+    position: relative;
+    width: 80%; /* Largura ajustada para 80% da tela */
+    padding-bottom: 45%; /* Proporção 16:9 ajustada com base na largura de 80% */
+    height: 0;
+    margin: 0 auto;/* Centraliza o vídeo na página */
+    margin-bottom: 20%; 
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
 /* ----------------------------- calendario eventos ----------------------------- */
 .titleSVG-align {
     display: flex;

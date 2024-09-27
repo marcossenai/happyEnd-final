@@ -43,23 +43,6 @@
         <button class="btnShare" id="shareButton">
             <img src="../images/icons/compartilhar.png" class="icon iconShare">
             <p class="txtBtn" id="txtShare">Compartilhar</p>
-            <!-- script JS compartilhar site -->
-            <script>
-                document.getElementById("shareButton").addEventListener("click", function () {
-                    let linkSite = window.location.href;
-                    navigator.clipboard.writeText(linkSite);
-                    // Verifica se a API de compartilhamento está disponível no navegador
-                    if (navigator.share) {
-                        navigator.share({
-                            title: 'O Último Projeto',
-                            text: 'Presencie o último projeto da primeira turma SENAI - Ferraz de Vasconcelos',
-                            url: window.location.href // URL atual do site
-                        });
-                    } else {
-                        alert('A API de compartilhamento não é suportada neste dispositivo.');
-                    }
-                });
-            </script>
         </button>
 
     </div>
@@ -74,11 +57,20 @@
 
             <br><br>
 
-            <button class="btn" id="btnSaibaMais">
+            <a href="#video" class="btn" id="btnSaibaMais">
                 <div class="iconSaibaMais"></div>
                 <p class="txtBtn" id="txtSaibaMais">Saiba Mais</p>
-            </button>
+            </a>
         </section>
+
+        <section id="video" class="video-wrapper">
+            <iframe id="youtubeVideo" src="https://www.youtube.com/embed/GB4PyMfl8QA?si=-vslKi2rVu5z-h1l"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </section>
+
 
 
         <!-- calendário datas eventos -->
@@ -220,13 +212,6 @@
                 <button class="btn" id="copyAdress">
                     <img src="../images/icons/iconLocal.png" class="iconInvert">
                     <p class="txtBtn">Copiar Endereço</p>
-                    <!-- script JS copiar endereço para área de transferencia -->
-                    <script>
-                        document.getElementById("copyAdress").addEventListener("click", function () {
-                            let endereco = "SESI - Ferraz de Vasconcelos, R. Francisco A Zeiler, 20 - Jardim Juliana, Ferraz de Vasconcelos - SP, 08502-310";
-                            navigator.clipboard.writeText(endereco);
-                        });
-                    </script>
                 </button>
 
             </div>
@@ -294,6 +279,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="../scripts/index.js"></script>
 </body>
 
 </html>
