@@ -18,8 +18,9 @@ canvas#backgroundCanvas {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; 
-    pointer-events: none; /* Impede que o canvas bloqueie interações */
+    z-index: -1;
+    pointer-events: none;
+    /* Impede que o canvas bloqueie interações */
 }
 
 
@@ -67,9 +68,9 @@ canvas#backgroundCanvas {
     display: flex;
     align-items: center;
     background-color: rgba(18, 18, 18, 0.75);
-    position: fixed; 
+    position: fixed;
     top: 5%;
-    backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);
     justify-content: space-between;
 }
 
@@ -77,27 +78,30 @@ canvas#backgroundCanvas {
     width: 24px;
 }
 
-.iconInvert{
+.iconInvert {
     width: 2rem;
     height: 2rem;
 }
-    
+
 
 #btnSaibaMais {
     background-color: #fff;
     border: none;
     align-items: center;
     justify-content: center;
-    transition: 200ms ease-in-out;  
+    transition: 200ms ease-in-out;
 }
+
 #txtSaibaMais {
     color: #000;
     font-size: 20px;
-    transition: 200ms ease-in-out; 
+    transition: 200ms ease-in-out;
 }
+
 #btnSaibaMais:hover {
     background-color: #ff0000;
 }
+
 #btnSaibaMais:hover #txtSaibaMais {
     color: #fff;
 }
@@ -107,13 +111,14 @@ canvas#backgroundCanvas {
     width: 40px;
     height: 40px;
     background-position: center;
-    transition: 200ms ease-in-out; 
+    transition: 200ms ease-in-out;
 }
+
 #btnSaibaMais:hover .iconSaibaMais {
     background-image: url("../images/icons/iconSaibaMaisAfter.png");
 }
 
-.mes{
+.mes {
     width: 100%;
     align-items: center;
     display: flex;
@@ -140,9 +145,10 @@ canvas#backgroundCanvas {
     transition: 400ms;
     color: var(--corBrancaTxt);
     margin-top: 25px;
-    transition: 200ms ease-in-out; 
+    transition: 200ms ease-in-out;
     cursor: pointer;
 }
+
 .btnShare {
     display: flex;
     background: none;
@@ -155,11 +161,11 @@ canvas#backgroundCanvas {
     transition: 400ms;
     color: var(--corBrancaTxt);
     margin-top: 25px;
-    transition: 0.3s ease-in-out; 
+    transition: 0.3s ease-in-out;
     cursor: pointer;
 }
 
-.btnShare:hover{
+.btnShare:hover {
     border-color: #FB0F0F;
 }
 
@@ -168,31 +174,35 @@ canvas#backgroundCanvas {
     color: #000;
 }
 
-.btn:hover .txtBtn{
+.btn:hover .txtBtn {
     color: #000;
 }
 
 .btn:hover .iconInvert {
-    filter: invert(1); 
-    transition: 0.3s ease-in-out; 
+    filter: invert(1);
+    transition: 0.3s ease-in-out;
 }
 
 
-.btnShare, .tituloHeader {
+.btnShare,
+.tituloHeader {
     margin: 0% 3%;
 }
 
 .nav-links {
     display: flex;
-    justify-content: space-around; /* Centraliza os links */
-     /* Ajusta para ocupar mais espaço */
+    justify-content: space-around;
+    /* Centraliza os links */
+    /* Ajusta para ocupar mais espaço */
 }
+
 .nav-links a {
     color: white;
     text-decoration: none;
     position: relative;
     transition: ease-in-out 0.2s;
 }
+
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -207,8 +217,10 @@ canvas#backgroundCanvas {
 .nav-links a:hover::after {
     width: 100%;
 }
+
 .nav-linksHeader a {
-    margin: 0 4%; /* Espaço entre os links */
+    margin: 0 4%;
+    /* Espaço entre os links */
 }
 
 
@@ -226,12 +238,12 @@ canvas#backgroundCanvas {
 .principal {
     color: white;
     font-family: 'orbitron';
-    font-size:4.5rem;
+    font-size: 4.5rem;
     margin: 0;
     margin-top: 80px;
 }
 
-.subtitulo{
+.subtitulo {
     z-index: 1;
     font-size: 1.3rem;
     color: white;
@@ -240,18 +252,21 @@ canvas#backgroundCanvas {
     max-width: 650px;
 }
 
-.poppinsBold{
+.poppinsBold {
     font-size: 2.96656rem;
 }
 
 /* ------------------ video ------------------- */
 .video-wrapper {
     position: relative;
-    width: 80%; /* Largura ajustada para 80% da tela */
-    padding-bottom: 45%; /* Proporção 16:9 ajustada com base na largura de 80% */
+    width: 80%;
+    /* Largura ajustada para 80% da tela */
+    padding-bottom: 45%;
+    /* Proporção 16:9 ajustada com base na largura de 80% */
     height: 0;
-    margin: 0 auto;/* Centraliza o vídeo na página */
-    margin-bottom: 20%; 
+    margin: 0 auto;
+    /* Centraliza o vídeo na página */
+    margin-bottom: 20%;
 }
 
 .video-wrapper iframe {
@@ -279,17 +294,17 @@ canvas#backgroundCanvas {
     justify-content: space-between;
 }
 
-.data{
+.data {
     font-size: 11.25rem;
     font-family: 'poppins';
     margin: -50px 0;
 }
 
-.classe{
+.classe {
     font-size: 1.8435rem;
 }
 
-.dezembro{
+.dezembro {
     font-size: 1.25rem;
 }
 
@@ -302,13 +317,15 @@ canvas#backgroundCanvas {
     background-color: var(--corBgCards);
     width: 27rem;
     aspect-ratio: 1 / 1;
-    
+
     padding: 20px;
     box-sizing: border-box;
 }
+
 .calendarBoxLeft {
     margin-right: 30px;
 }
+
 .calendarBoxRight {
     margin-left: 30px;
 }
@@ -323,6 +340,7 @@ canvas#backgroundCanvas {
     margin: 0;
     padding: 0;
 }
+
 .linhasSVG-horizontal {
     height: 1px;
 }
@@ -331,18 +349,21 @@ canvas#backgroundCanvas {
 .boxSalaCalendar {
     width: 80%;
 }
+
 .calendarTitle {
     /* esta também linkado com .principal por eficiencia */
     margin: 0;
-    font-size:6em;
+    font-size: 6em;
     font-family: "poppins";
 }
+
 .calendarMainContent {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 95%;
 }
+
 .calendarDaysSVG-alignment {
     display: flex;
     width: 100%;
@@ -350,16 +371,141 @@ canvas#backgroundCanvas {
     flex-direction: row;
 }
 
+
+/* ------------------------------ Projetos ---------------------------------------- */
+
+
+.conteiner_projetos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.carrossel {
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: -20px;
+    position: relative;
+
+}
+
+.slide {
+    width: 350px;
+    height: 85%;
+    position: relative;
+    margin: 0 10px;
+    background-color: #fff;
+
+    transition: 1s;
+    opacity: 0.7;
+    backdrop-filter: blur(10px); /* nao sei como funciona n*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slide .conteudo_slide {
+    padding: 0 20px;
+}
+
+.slide .titulo {
+    font-family: 'poppinsBold';
+    font-size: 50px;
+    text-align: left;
+    color: #000;
+}
+
+.slide .texto {
+    font-family: 'poppins';
+    font-size: 14px;
+    text-align: left;
+    padding-right: 20%;
+    color: #000;
+}
+
+.slide img {
+    border-radius: 2mm;
+    height: 50%;
+    width: 50%;
+}
+
+.slide.active {
+    width: 400px;
+    height: 100%;
+    opacity: 1;
+    z-index: 2;
+}
+
+.slide.active .titulo {
+    font-size: 60px;
+}
+
+.slide.prev,
+.slide.next {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+.slide.out {
+    position: absolute;
+    opacity: 0;
+}
+
+.textoTitulo {
+    color: #fff;
+    font-size: 1.99231rem;
+    font-family: 'poppinsLight';
+    text-align: center;
+    margin: 0 100px;
+}
+
+.conteiner_titulo {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caixa-titulo {
+    width: 100%;
+    display: flex;
+    align-items: end;
+}
+
+.caixa-texto {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.linhasSVG {
+    margin: 0;
+    padding: 0;
+}
+
+.linhasSVG-horizontal-carrossel {
+    height: 50px;
+}
+
 /* ------------------------------ professores ---------------------------------------- */
 .professoresContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-   
+
     justify-content: center;
     align-items: center;
     width: 100%;
 }
+
 .professor {
     display: flex;
     background-color: var(--corBgCards);
@@ -368,6 +514,7 @@ canvas#backgroundCanvas {
     position: relative;
     justify-content: center;
 }
+
 .infoBox-professor {
     display: flex;
     position: absolute;
@@ -379,6 +526,7 @@ canvas#backgroundCanvas {
     padding: 10% 0;
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.25);
 }
+
 .infos-professor {
     display: flex;
     flex-direction: column;
@@ -390,6 +538,7 @@ canvas#backgroundCanvas {
     border-right: none;
     text-align: center;
 }
+
 .imgProfessor {
     width: 100%;
     pointer-events: none;
@@ -401,10 +550,12 @@ canvas#backgroundCanvas {
     display: flex;
     flex-direction: row;
 }
-@media (max-width: 1200px) { 
+
+@media (max-width: 1200px) {
     #location {
         flex-direction: column-reverse;
     }
+
     #locationInfo {
         width: 100%;
     }
@@ -430,7 +581,8 @@ canvas#backgroundCanvas {
     padding: 2em;
     width: 100%;
     height: 35rem;
-    box-sizing: border-box;  /* border-box faz com que a largura total n seja afetada por padding */
+    box-sizing: border-box;
+    /* border-box faz com que a largura total n seja afetada por padding */
 }
 
 #map {
@@ -444,21 +596,20 @@ canvas#backgroundCanvas {
 /* gradiente titulos */
 .word {
     text-transform: uppercase;
-    background-image: linear-gradient(
-        -225deg,
-        #e05050 0%,
-        #ff0000 29%,
-        #841515 67%,
-        #ff0000 100%
-    );
+    background-image: linear-gradient(-225deg,
+            #e05050 0%,
+            #ff0000 29%,
+            #841515 67%,
+            #ff0000 100%);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: #fff; 
+    color: #fff;
     display: inline-block;
     animation: textclip 2s linear infinite;
 }
+
 @keyframes textclip {
     to {
         background-position: -200% center;
@@ -467,35 +618,43 @@ canvas#backgroundCanvas {
 
 /* Estilos da barra de rolagem (scrollbar) */
 ::-webkit-scrollbar {
-    width: 10px; /* Largura da barra de rolagem */
+    width: 10px;
+    /* Largura da barra de rolagem */
 }
 
 ::-webkit-scrollbar-track {
-    background: #230000; /* Fundo preto com muita transparência */
+    background: #230000;
+    /* Fundo preto com muita transparência */
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #ff0000; /* Barrinha vermelha */
-    border-radius: 5px; /* Arredonda os cantos da barrinha */
+    background-color: #ff0000;
+    /* Barrinha vermelha */
+    border-radius: 5px;
+    /* Arredonda os cantos da barrinha */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #585858; /* Barrinha vermelha mais escura ao passar o mouse */
+    background-color: #585858;
+    /* Barrinha vermelha mais escura ao passar o mouse */
 }
 
 
 #marginLateralPagina {
-    margin: 0 auto; /* Centraliza horizontalmente */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 1200px; /* Limita a largura máxima */
-    width: 100%; /* Garante que ocupe 100% da largura disponível */
+    max-width: 1200px;
+    /* Limita a largura máxima */
+    width: 100%;
+    /* Garante que ocupe 100% da largura disponível */
 }
 
-.tituloInfo{
+.tituloInfo {
     font-size: 1.99231rem;
     font-family: 'poppinsLight';
 }
@@ -526,16 +685,20 @@ footer {
     flex-direction: row;
     margin-top: 20px;
 }
+
 .nav-footer {
     margin-left: 50px;
 }
+
 .footerLinks {
     flex-direction: column;
     margin-top: 15px;
 }
+
 .footerLinks a {
     margin: 10px 0;
 }
+
 .txtFooterMarginTop {
     margin: 40px 0 20px 0;
 }
