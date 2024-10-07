@@ -15,6 +15,25 @@
     }
 }
 
+@media (max-width: 1060px) {
+    /* ------------------ calendar --------------------- */
+    .calendarContainer {
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        justify-content: center;
+        
+    }
+    
+    .calendarBox {
+        margin: 0;
+        margin-bottom: 25px;
+    }
+
+    .linhasSVG-vertical {
+        height: 1000px;
+    }
+}
+
 
 /* .menu-toggle {
     display: none;

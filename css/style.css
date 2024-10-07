@@ -329,11 +329,11 @@ canvas#backgroundCanvas {
 }
 
 .calendarBoxLeft {
-    margin-right: 50px;
+    margin-right: 5%;
 }
 
 .calendarBoxRight {
-    margin-left: 50px;
+    margin-left: 5%;
 }
 
 .calendarRowPosition {
