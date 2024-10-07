@@ -666,7 +666,6 @@ footer {
     align-items: center;
     border-top: 2px solid var(--corVermelhaTxt);
     width: 100%;
-    z-index: 10;
     background-color: rgb(0, 0, 0);
     padding: 5% 0;
     z-index: 1;
