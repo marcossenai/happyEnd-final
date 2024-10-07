@@ -381,12 +381,6 @@ canvas#backgroundCanvas {
 /* ------------------------------ Projetos ---------------------------------------- */
 
 
-.conteiner_projetos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
 
 .carrossel {
     width: 100%;
@@ -395,7 +389,7 @@ canvas#backgroundCanvas {
     align-items: center;
     justify-content: center;
 
-    margin-top: -20px;
+    margin-top: 20px;
     position: relative;
 
 }
@@ -475,7 +469,7 @@ canvas#backgroundCanvas {
 }
 
 .conteiner_titulo {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -484,7 +478,6 @@ canvas#backgroundCanvas {
 .caixa-titulo {
     width: 100%;
     display: flex;
-    align-items: end;
 }
 
 .caixa-texto {
@@ -499,7 +492,9 @@ canvas#backgroundCanvas {
 }
 
 .linhasSVG-horizontal-carrossel {
+    display: flex;
     height: 50px;
+    width: 100%;
 }
 
 /* ------------------------------ professores ---------------------------------------- */
