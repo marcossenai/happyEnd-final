@@ -558,16 +558,6 @@ canvas#backgroundCanvas {
     flex-direction: row;
 }
 
-@media (max-width: 1200px) {
-    #location {
-        flex-direction: column-reverse;
-    }
-
-    #locationInfo {
-        width: 100%;
-    }
-}
-
 #locationInfo {
     display: flex;
     flex-direction: column;
