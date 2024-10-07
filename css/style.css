@@ -380,10 +380,15 @@ canvas#backgroundCanvas {
 
 /* ------------------------------ Projetos ---------------------------------------- */
 
-
+.carrosselContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 
 .carrossel {
-    width: 100%;
+    width: 80%;
     height: 65vh;
     display: flex;
     align-items: center;
@@ -395,7 +400,7 @@ canvas#backgroundCanvas {
 }
 
 .slide {
-    width: 350px;
+    width: 40%;
     height: 85%;
     position: relative;
     margin: 0 10px;
