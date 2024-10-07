@@ -52,6 +52,28 @@
         width: 100%;
         padding-bottom: 60%;
     }
+
+
+
+    /* ------------------------- footer ----------------------- */
+    .txtFooterMarginTop {
+        width: auto;
+    }
+}
+
+@media (max-width: 510px) {
+
+    .nav-footer {
+        margin: 0px;
+    }
+
+    .footerSection {
+        flex-direction: column;
+    }
+
+    .underInfoFooter {
+        margin-top: 50px;
+    }
 }
 
 

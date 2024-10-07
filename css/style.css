@@ -669,6 +669,7 @@ footer {
     z-index: 10;
     background-color: rgb(0, 0, 0);
     padding: 5% 0;
+    z-index: 1;
 }
 
 .divisionLine {
@@ -685,7 +686,7 @@ footer {
 }
 
 .nav-footer {
-    margin-left: 50px;
+    margin-left: 100px;
 }
 
 .footerLinks {
@@ -699,6 +700,7 @@ footer {
 
 .txtFooterMarginTop {
     margin: 40px 0 20px 0;
+    width: 50%;
 }
 
 .socialIcon {
