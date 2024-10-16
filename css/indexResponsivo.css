@@ -76,7 +76,12 @@
 }
 
 @media (max-width: 510px) {
-
+    .btnShare {
+        width: 50px;
+    }
+    #txtShare {
+        display: none;
+    }
 
     /* -------------------------- professores ------------------------- */
     .professor {
@@ -96,10 +101,51 @@
     .underInfoFooter {
         margin-top: 50px;
     }
+
+    .data {
+        font-size: 5rem;
+        margin: 0;
+    }
+
 }
 
-@media (max-width: 350px) {
-    
+@media (max-width: 450px) {
+    .calendarBox {
+        width: 15rem;
+    }
+
+    .btn {
+        border-radius: 15px;
+        padding: 0px 1%;
+        width: 12.5rem;
+        height: 3.75rem;
+        margin-top: 25px;
+    }
+
+    .txtBtn {
+        font-size: 1rem
+    }
+
+    .principal {
+        font-size: 3rem;
+    }
+    .subtitulo {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    #locationMap {
+        padding: 2em;
+        width: 100%;
+        height: 20rem;
+    }
+
+    .poppinsBold {
+        font-size: 2.25rem;
+    }
+    .tituloInfo {
+        font-size: 1.5rem;
+    }
 }
 
 

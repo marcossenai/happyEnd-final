@@ -99,7 +99,6 @@ canvas#backgroundCanvas {
 
 #txtSaibaMais {
     color: #000;
-    font-size: 20px;
     transition: 200ms ease-in-out;
 }
 
@@ -298,6 +297,12 @@ canvas#backgroundCanvas {
     flex-direction: row;
     margin: 0 5%;
     justify-content: space-between;
+}
+.dataContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .data {
