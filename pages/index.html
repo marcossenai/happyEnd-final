@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/estrelas.css">
     <link rel="stylesheet" href="../css/indexResponsivo.css">
+    <link rel="stylesheet" href="../css/carrossel.css">
     <title>HappyEnd - Bem-Vindo</title>
 </head>
 
@@ -155,120 +156,46 @@
 
 
         <!-- projetos -->
-        <section id="projetos-section" class="calendarBase">
-
-            <div class="conteiner_titulo">
-
-                <div class="caixa-titulo">
-                    <svg class="linhasSVG linhasSVG-horizontal-carrossel" height="100%" width="100%">
-
-                        <line x1="0%" y1="0%" x2="90%" y2="0%" style="stroke:#fff;stroke-width:2"></line>
-                        <line x1="0%" y1="0%" x2="0%" y2="100%" style="stroke:#fff;stroke-width:2"></line>
-                    </svg>
-
-                    <h1 class="titleSVG-align poppinsBold">Projetos</h1>
-
-                    <svg class="linhasSVG linhasSVG-horizontal-carrossel" height="100%" width="100%">
-
-                        <line x1="10%" y1="0%" x2="100%" y2="0%" style="stroke:#fff;stroke-width:2"></line>
-                        <line x1="100%" y1="0%" x2="100%" y2="100%" style="stroke:#fff;stroke-width:2"></line>
-                    </svg>
+        <section id="projetos">
+            <h1>Projetos</h1>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Imagens do 3A -->
+                    <div class="carousel-slide">
+                        <img src="../images/img1-3A.jpg" alt="Projeto 3A - 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../images/img2-3A.jpg" alt="Projeto 3A - 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../images/img3-3A.jpg" alt="Projeto 3A - 3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../images/img4-3A.jpg" alt="Projeto 3A - 3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../images/img5-3A.jpg" alt="Projeto 3A - 3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../images/img6-3A.jpg" alt="Projeto 3A - 3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../images/img7-3A.jpg" alt="Projeto 3A - 3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../images/img8-3A.jpg" alt="Projeto 3A - 3">
+                    </div>
                 </div>
-
-                <div class="caixa-texto">
-
-                    <svg class="linhasSVG" width="1" height="200">
-                        <!-- Linha vertical no lado direito -->
-                        <line x1="0" y1="0" x2="0" y2="100%" style="stroke:#ffffff;stroke-width:2"></line>
-                    </svg>
-
-                    <div class="textoTitulo">Conheça projetos inovadores de nossos alunos</div>
-
-                    <svg class="linhasSVG" width="1" height="200">
-                        <!-- Linha vertical no lado direito -->
-                        <line x1="0" y1="0" x2="0" y2="100%" style="stroke:#ffffff;stroke-width:2"></line>
-                    </svg>
-
+                <div class="carousel-controls">
+                    <button id="prevBtn">Anterior</button>
+                    <span id="slide-counter">1/3</span>
+                    <button id="nextBtn">Próximo</button>
                 </div>
-
+                <button id="switchBtn">Mudar para 3B</button>
             </div>
-
-            <div class="carrosselContainer">
-                <div class="carrossel">
-
-                    <div class="slide active">
-
-                        <div class="conteudo_slide">
-
-                            <h1 class="titulo">Integrity</h1>
-                            <p class="texto">Lorem ipsum dolor sit amet consectetur. Leo platea nunc et turpis congue
-                                integer
-                                ultrices. Nam pulvinar vel sit nulla urna quam elit. Lorem accumsan duis tincidunt nunc.
-                                Est
-                                porttitor risus amet sit id.</p>
-                        </div>
-
-
-                        <img src="../images/imagem1.png" alt="" />
-
-                    </div>
-
-                    <div class="slide prev">
-
-                        <div class="conteudo_slide">
-
-                            <h1 class="titulo">Integrity</h1>
-                            <p class="texto">Lorem ipsum dolor sit amet consectetur. Leo platea nunc et turpis congue
-                                integer
-                                ultrices. Nam pulvinar vel sit nulla urna quam elit. Lorem accumsan duis tincidunt nunc.
-                                Est
-                                porttitor risus amet sit id.</p>
-                        </div>
-
-
-                        <img src="../images/imagem2.png" alt="" />
-
-                    </div>
-
-                    <div class="slide next">
-
-                        <div class="conteudo_slide">
-
-                            <h1 class="titulo">Integrity</h1>
-                            <p class="texto">Lorem ipsum dolor sit amet consectetur. Leo platea nunc et turpis congue
-                                integer
-                                ultrices. Nam pulvinar vel sit nulla urna quam elit. Lorem accumsan duis tincidunt nunc.
-                                Est
-                                porttitor risus amet sit id.</p>
-                        </div>
-
-
-                        <img src="../images/imagem3.png" alt="" />
-
-                    </div>
-
-                    <div class="slide out">
-
-                        <div class="conteudo_slide">
-
-                            <h1 class="titulo">Integrity</h1>
-                            <p class="texto">Lorem ipsum dolor sit amet consectetur. Leo platea nunc et turpis congue
-                                integer
-                                ultrices. Nam pulvinar vel sit nulla urna quam elit. Lorem accumsan duis tincidunt nunc.
-                                Est
-                                porttitor risus amet sit id.</p>
-                        </div>
-
-
-                        <img src="../images/imagem4.png" alt="" />
-
-                    </div>
-                </div>
-            </div>
-
-
         </section>
-
+        
+        
 
         <!-- professores homenagem -->
         <section id="professores-section">
@@ -391,6 +318,7 @@
     </footer>
 
     <script src="../js/index.js"></script>
+    <script src="../js/carrossel.js"></script>
 </body>
 
 </html>
