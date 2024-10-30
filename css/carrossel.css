@@ -1,63 +1,71 @@
 .carousel-container {
     position: relative;
-    max-width: 80%;
-    height: auto;
+    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: aqua;
 }
 
 .carousel {
     display: flex;
+    align-items: center; /* Centraliza as imagens verticalmente */
     transition: transform 0.5s ease-in-out;
-    width: 100%;
-    height: 100%;
 }
 
 .carousel-slide {
-    min-width: 100%;
-    transition: transform 0.5s ease-in-out;
+    flex: 0 0 60%; /* Largura para acomodar as imagens adjacentes */
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out, opacity 0.5s;
+    margin: 0 2%;
+    opacity: 0.5;
+}
+
+.carousel-slide.active {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 1; /* Garante que o slide atual fique acima dos adjacentes */
+}
+
+.carousel-slide.prev,
+.carousel-slide.next {
+    transform: scale(0.85); /* Reduz as imagens adjacentes */
+    opacity: 0.75;
+    z-index: 0; /* Mantém o slide atual acima */
 }
 
 .carousel-slide img {
-    width: 70%;
-    height: auto;
+    max-height: 300px; /* Ajuste conforme necessário */
+    object-fit: cover;
+    width: 100%;
 }
 
 .carousel-controls {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 #slide-counter {
     margin: 0 15px;
     font-size: 18px;
+    color: #333;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
+.btnCarrossel {
+    padding: 10px;
+    background-color: transparent;
+    color: #333;
     border: none;
+    font-size: 24px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #555;
+    color: #555;
 }
 
-@media screen and (max-width: 1200px) {
-    .carousel-container {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .carousel-slide img {
-        height: auto;
-    }
-}

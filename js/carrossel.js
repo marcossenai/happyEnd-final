@@ -2,18 +2,33 @@ let currentSlide = 0;
 let totalSlides = document.querySelectorAll('.carousel-slide').length;
 let carousel = document.querySelector('.carousel');
 let slideCounter = document.getElementById('slide-counter');
-let showing3A = true; // Estado para controlar entre 3A e 3B
+let showing3A = true;
 
-// Função para atualizar o contador de slides
+// Atualiza o contador de slides
 function updateCounter() {
     slideCounter.textContent = `${currentSlide + 1}/${totalSlides}`;
 }
 
-// Função para mover o carrossel para o slide atual
+// Função para mover o carrossel e destacar os slides adjacentes
 function showSlide(index) {
     if (index >= totalSlides) currentSlide = 0;
     if (index < 0) currentSlide = totalSlides - 1;
-    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    // Centraliza o slide ativo
+    const offset = currentSlide * -60 + 5; // Ajuste para acomodar a nova largura
+    carousel.style.transform = `translateX(${offset}%)`;
+
+    // Remove classes ativas de todos os slides
+    document.querySelectorAll('.carousel-slide').forEach(slide => {
+        slide.classList.remove('active', 'prev', 'next');
+    });
+
+    // Adiciona classes para o slide atual e os adjacentes
+    const slides = document.querySelectorAll('.carousel-slide');
+    slides[currentSlide].classList.add('active');
+    if (slides[currentSlide - 1]) slides[currentSlide - 1].classList.add('prev');
+    if (slides[currentSlide + 1]) slides[currentSlide + 1].classList.add('next');
+
     updateCounter();
 }
 
@@ -28,27 +43,7 @@ document.getElementById('prevBtn').addEventListener('click', () => {
     showSlide(currentSlide);
 });
 
-// Swipe usando eventos touch
-let startX = 0;
-
-carousel.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-});
-
-carousel.addEventListener('touchmove', (e) => {
-    let moveX = e.touches[0].clientX;
-    if (startX - moveX > 50) {
-        currentSlide++;
-        showSlide(currentSlide);
-        startX = moveX;
-    } else if (startX - moveX < -50) {
-        currentSlide--;
-        showSlide(currentSlide);
-        startX = moveX;
-    }
-});
-
-// Função para alternar entre as imagens do 3A e 3B
+// Alternar entre as imagens do 3A e 3B
 document.getElementById('switchBtn').addEventListener('click', () => {
     const carouselContainer = document.querySelector('.carousel');
     carouselContainer.innerHTML = ''; // Limpar slides atuais
@@ -58,8 +53,11 @@ document.getElementById('switchBtn').addEventListener('click', () => {
         const images3B = [
             '../images/img1-3B.jpg',
             '../images/img2-3B.jpg',
-            '../images/img3-3B.jpg'
-            // Adicionar mais imagens do 3B conforme necessário
+            '../images/img3-3B.jpg',
+            '../images/img4-3B.jpg',
+            '../images/img5-3B.jpg',
+            '../images/img6-3B.jpg',
+            '../images/img7-3B.jpg'
         ];
 
         images3B.forEach((src, index) => {
@@ -73,15 +71,18 @@ document.getElementById('switchBtn').addEventListener('click', () => {
         });
 
         totalSlides = images3B.length;
-        document.getElementById('switchBtn').textContent = "Mudar para 3A"; // Atualiza o botão
+        document.getElementById('switchBtn').textContent = "Mudar para 3A";
         showing3A = false;
     } else {
         // Voltando para o 3A
         const images3A = [
             '../images/img1-3A.jpg',
             '../images/img2-3A.jpg',
-            '../images/img3-3A.jpg'
-            // Adicionar mais imagens do 3A conforme necessário
+            '../images/img3-3A.jpg',
+            '../images/img4-3A.jpg',
+            '../images/img5-3A.jpg',
+            '../images/img6-3A.jpg',
+            '../images/img7-3A.jpg'
         ];
 
         images3A.forEach((src, index) => {
@@ -95,7 +96,7 @@ document.getElementById('switchBtn').addEventListener('click', () => {
         });
 
         totalSlides = images3A.length;
-        document.getElementById('switchBtn').textContent = "Mudar para 3B"; // Atualiza o botão
+        document.getElementById('switchBtn').textContent = "Mudar para 3B";
         showing3A = true;
     }
 
@@ -103,6 +104,7 @@ document.getElementById('switchBtn').addEventListener('click', () => {
     currentSlide = 0;
     showSlide(currentSlide);
 });
+
 
 // Inicializar o carrossel
 showSlide(currentSlide);
