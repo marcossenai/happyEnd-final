@@ -1,0 +1,118 @@
+.carrosselContainerDouble {
+    width: 100%;
+}
+
+.carrosselDouble {
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    gap: 1.2rem;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    
+}
+
+.card {
+    scroll-snap-align: start;
+    width: 300px;
+    height: auto;
+    aspect-ratio: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 5%;
+}
+/* cardsEspecificos */
+#card1A {
+    background-image: url(../images/img1-3A.jpg);
+}
+#card2A {
+    background-image: url(../images/img2-3A.jpg);
+}
+#card3A {
+    background-image: url(../images/img3-3A.jpg);
+}
+#card4A {
+    background-image: url(../images/img4-3A.jpg);
+}
+#card5A {
+    background-image: url(../images/img5-3A.jpg);
+}
+#card6A {
+    background-image: url(../images/img6-3A.jpg);
+}
+#card7A {
+    background-image: url(../images/img7-3A.jpg);
+}
+
+#card1B {
+    background-image: url(../images/img1-3B.jpg);
+}
+#card2B {
+    background-image: url(../images/img2-3B.jpg);
+}
+#card3B {
+    background-image: url(../images/img3-3B.jpg);
+}
+#card4B {
+    background-image: url(../images/img4-3B.jpg);
+}
+#card5B {
+    background-image: url(../images/img5-3B.jpg);
+}
+#card6B {
+    background-image: url(../images/img6-3B.jpg);
+}
+#card7B {
+    background-image: url(../images/img7-3B.jpg);
+}
+
+
+/* botao switch entre turmar */
+.toggle-switch {
+    position: relative;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #303030;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.switch:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+input:checked + .switch {
+    background-color: #303030;
+}
+
+input:checked + .switch:before {
+    transform: translateX(30px);
+}

@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/estrelas.css">
     <link rel="stylesheet" href="../css/indexResponsivo.css">
+
     <link rel="stylesheet" href="../css/carrossel.css">
+    <link rel="stylesheet" href="../css/carrosselDouble.css">
+
     <title>HappyEnd - Bem-Vindo</title>
 </head>
 
@@ -156,41 +159,35 @@
 
 
         <!-- projetos -->
-        <div id="projetos-section">
-            <h1 class="titleSVG-align poppinsBold">Projetos</h1>
-            <div class="carousel-container">
-                <div class="carousel">
-                    <div class="carousel-slide">
-                        <img src="../images/img1-3A.jpg" alt="Projeto 3A - 1">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="../images/img2-3A.jpg" alt="Projeto 3A - 1">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="../images/img3-3A.jpg" alt="Projeto 3A - 1">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="../images/img4-3A.jpg" alt="Projeto 3A - 1">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="../images/img5-3A.jpg" alt="Projeto 3A - 1">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="../images/img6-3A.jpg" alt="Projeto 3A - 1">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="../images/img7-3A.jpg" alt="Projeto 3A - 1">
-                    </div>
-                </div>
-                <div class="carousel-controls">
-                    <button class="btnCarrossel" id="prevBtn">❮</button>
-                    <p id="slide-counter">1/5</p>
-                    <button class="btnCarrossel" id="nextBtn">❯</button>
-                </div>
-                <button id="switchBtn">Mudar para 3B</button>
+        <section id="projetos-section" class="carrosselContainerDouble">
+            <div class="toggle-switch">
+                <input type="checkbox" id="switchBtn" onclick="switchTurma()">
+                <label for="switchBtn" class="switch"></label>
             </div>
-        </div>
-        
+            <h1 class="titleSVG-align poppinsBold">Projetos<span id="serieCARROSSEL"> 3ºA</span></h1>
+            <div class="carrosselDouble" id="carrossel3A" style="display: grid;">
+                <article class="card" id="card1A"></article>
+                <article class="card" id="card2A"></article>
+                <article class="card" id="card3A"></article>
+                <article class="card" id="card4A"></article>
+                <article class="card" id="card5A"></article>
+                <article class="card" id="card6A"></article>
+                <article class="card" id="card7A"></article>
+            </div>
+
+            <div class="carrosselDouble" id="carrossel3B" style="display: none;">
+                <article class="card" id="card1B"></article>
+                <article class="card" id="card2B"></article>
+                <article class="card" id="card3B"></article>
+                <article class="card" id="card4B"></article>
+                <article class="card" id="card5B"></article>
+                <article class="card" id="card6B"></article>
+                <article class="card" id="card7B"></article>
+            </div>
+
+
+        </section>
+
         
         
         
