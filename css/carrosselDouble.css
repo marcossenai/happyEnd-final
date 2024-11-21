@@ -1,118 +1,287 @@
-.carrosselContainerDouble {
+.carousel {
     width: 100%;
-}
-
-.carrosselDouble {
-    display: grid;
-    grid-auto-flow: column;
-    scroll-behavior: auto;
-    gap: 1.2rem;
-    overflow-y: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
-    
-}
-
-.card {
-    scroll-snap-align: start;
-    width: 300px;
-    height: auto;
-    aspect-ratio: 2/3;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-bottom: 5%;
-}
-/* cardsEspecificos */
-#card1A {
-    background-image: url(../images/img1-3A.jpg);
-}
-#card2A {
-    background-image: url(../images/img2-3A.jpg);
-}
-#card3A {
-    background-image: url(../images/img3-3A.jpg);
-}
-#card4A {
-    background-image: url(../images/img4-3A.jpg);
-}
-#card5A {
-    background-image: url(../images/img5-3A.jpg);
-}
-#card6A {
-    background-image: url(../images/img6-3A.jpg);
-}
-#card7A {
-    background-image: url(../images/img7-3A.jpg);
-}
-
-#card1B {
-    background-image: url(../images/img1-3B.jpg);
-}
-#card2B {
-    background-image: url(../images/img2-3B.jpg);
-}
-#card3B {
-    background-image: url(../images/img3-3B.jpg);
-}
-#card4B {
-    background-image: url(../images/img4-3B.jpg);
-}
-#card5B {
-    background-image: url(../images/img5-3B.jpg);
-}
-#card6B {
-    background-image: url(../images/img6-3B.jpg);
-}
-#card7B {
-    background-image: url(../images/img7-3B.jpg);
-}
-
-
-/* botao switch entre turmar */
-.toggle-switch {
+    flex-direction: column;
     position: relative;
-    width: 60px;
-    height: 30px;
 }
 
-.toggle-switch input {
+/* Adicionando o estilo para as setas */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: -10;
+    width: 110%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.carousel-controls .arrow {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-controls .arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#toggleImagesBtn {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Posicionando o botão no canto esquerdo */
+.switch-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Switch styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    right: 45%;
+}
+
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-.switch {
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #303030;
-    border-radius: 30px;
-    transition: background-color 0.3s;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
 }
 
-.switch:before {
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
     width: 26px;
-    left: 2px;
-    bottom: 2px;
-    background-color: white;
     border-radius: 50%;
-    transition: transform 0.3s;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
 }
 
-input:checked + .switch {
-    background-color: #303030;
+input:checked + .slider {
+    background-color: #ff0000;
 }
 
-input:checked + .switch:before {
-    transform: translateX(30px);
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.caroussel-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.card {
+    width: 10%;
+    aspect-ratio: 2 / 3;
+    border-radius: 0.75rem;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+    opacity: 0.6;
+    transition: opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    opacity: 1;
+    box-shadow: 0px 15px 40px -5px rgba(0, 0, 0, 0.8);
+}
+
+input:checked + label {
+    opacity: 1;
+    width: 35%;
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 180px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: 0.3s;
+    transition: all 0.3s ease;
+}
+
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.header {
+    transition: opacity 0.5s ease;
+}
+
+.header.fullscreen-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.fullscreen-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fullscreen-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.close-fullscreen {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+
+/* CSS para o texto "Dia1" e "Dia2" */
+#dayLabel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    font-family:'orbitron';
+}
+
+/* CSS para ocultar a barra de navegação quando em fullscreen */
+.header.fullscreen-hidden {
+    display: none; /* Usando display: none para esconder a barra de navegação */
+}
+
+@media (max-width: 550px) {
+    .caroussel-container {
+        overflow: hidden;
+        width: 80%;
+        display: flex;
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
+    }
+
+    .card {
+        flex: 0 0 100%;
+        aspect-ratio: 2 / 3;
+        margin: 0;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        right: 30%;
+    }
+
+    #dayLabel {
+        right: 50px;
+    }
 }

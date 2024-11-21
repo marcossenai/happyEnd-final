@@ -159,75 +159,40 @@
 
 
         <!-- projetos -->
-        <section id="projetos-section" class="carrosselContainerDouble">
-            <div class="toggle-switch">
-                <input type="checkbox" id="switchBtn" onclick="switchTurma()">
-                <label for="switchBtn" class="switch"></label>
-            </div>
-            <h1 class="titleSVG-align poppinsBold">Projetos<span id="serieCARROSSEL"> 3ºA</span></h1>
-            <div class="carrosselDouble" id="carrossel3A" style="display: grid;">
-                <article class="card" id="card1A"></article>
-                <article class="card" id="card2A"></article>
-                <article class="card" id="card3A"></article>
-                <article class="card" id="card4A"></article>
-                <article class="card" id="card5A"></article>
-                <article class="card" id="card6A"></article>
-                <article class="card" id="card7A"></article>
-            </div>
+        <section id="projetos">
+            <h1 class="titleSVG-align poppinsBold">Projetos</h1>
+            <div class="carousel">
 
-            <div class="carrosselDouble" id="carrossel3B" style="display: none;">
-                <article class="card" id="card1B"></article>
-                <article class="card" id="card2B"></article>
-                <article class="card" id="card3B"></article>
-                <article class="card" id="card4B"></article>
-                <article class="card" id="card5B"></article>
-                <article class="card" id="card6B"></article>
-                <article class="card" id="card7B"></article>
-            </div>
+                <!-- Botão de alternância -->
+                <label class="switch">
+                    <input type="checkbox" id="toggleImagesBtn">
+                    <span class="slider round"></span>
+                </label>
 
-
-        </section>
-
-        
-        
-        
-
-        <!-- professores homenagem -->
-        <section id="professores-section">
-            <h1 class="titleSVG-align poppinsBold">Professores</h1>
-
-            <div class="professoresContainer">
-
-                <div class="professor">
-                    <img class="imgProfessor" src="../images/templateProfessor.png">
-
-                    <div class="infoBox-professor">
-                        <div class="infos-professor">
-                            <p class="txtBtn">Juliana Carvalho</p>
-                        </div>
-                    </div>
+                <span id="dayLabel">Dia1</span>
+                
+                <div class="caroussel-container">
+                    <input type="radio" name="slide" id="c1" checked>
+                    <label for="c1" class="card"></label>
+                    <input type="radio" name="slide" id="c2">
+                    <label for="c2" class="card"></label>
+                    <input type="radio" name="slide" id="c3">
+                    <label for="c3" class="card"></label>
+                    <input type="radio" name="slide" id="c4">
+                    <label for="c4" class="card"></label>
+                    <input type="radio" name="slide" id="c5">
+                    <label for="c5" class="card"></label>
+                    <input type="radio" name="slide" id="c6">
+                    <label for="c6" class="card"></label>
+                    <input type="radio" name="slide" id="c7">
+                    <label for="c7" class="card"></label>
                 </div>
-
-                <div class="professor">
-                    <img class="imgProfessor" src="../images/templateProfessor.png">
-
-                    <div class="infoBox-professor">
-                        <div class="infos-professor">
-                            <p class="txtBtn">Marcos Vinicius</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="professor">
-                    <img class="imgProfessor" src="../images/templateProfessor.png">
-
-                    <div class="infoBox-professor">
-                        <div class="infos-professor">
-                            <p class="txtBtn">Marcelo Alves</p>
-                        </div>
-                    </div>
-                </div>
-
+            </div>
+            
+        
+            <div id="fullscreenOverlay" class="fullscreen-overlay">
+                <button id="closeFullscreen" class="close-fullscreen">×</button>
+                <img id="fullscreenImage" class="fullscreen-image" src="" alt="Imagem em tela cheia">
             </div>
         </section>
 
@@ -314,6 +279,7 @@
 
     <script src="../js/index.js"></script>
     <script src="../js/carrossel.js"></script>
+    <script src="../js/carrossel2.js"></script>
 </body>
 
 </html>
