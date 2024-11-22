@@ -6,6 +6,7 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
+    top: -40px;
 }
 
 /* Adicionando o estilo para as setas */
@@ -59,7 +60,8 @@
     height: 34px;
     margin-top: 1%;
     margin-bottom: 1%;
-    right: 45%;
+    top:-35px;
+    right: 20%;
 }
 
 .switch input {
@@ -242,9 +244,9 @@ input:checked + label .description {
 /* CSS para o texto "Dia1" e "Dia2" */
 #dayLabel {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 20px;
+    top: -23px;
+    right: 28%;
+    font-size: 25px;
     font-weight: bold;
     color: #ffffff;
     transition: all 0.3s ease;
@@ -278,10 +280,11 @@ input:checked + label .description {
         height: 34px;
         margin-top: 2%;
         margin-bottom: 2%;
-        right: 30%;
+        right: 40%;
     }
 
     #dayLabel {
-        right: 50px;
+        right: -6px;
+        top: -26px;
     }
 }
