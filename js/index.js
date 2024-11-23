@@ -15,21 +15,6 @@ document.getElementById("shareButton").addEventListener("click", function () {
 });
 
 
-
-
-
-// iniciar video Saiba Mais
-document.getElementById('btnSaibaMais').addEventListener('click', function (e) {
-    const iframe = document.getElementById('youtubeVideo');
-
-    const videoSrc = iframe.src + "&autoplay=1";
-    iframe.src = videoSrc;
-});
-
-
-
-
-
 // copiar endereço
 document.getElementById("copyAdress").addEventListener("click", function () {
     let endereco = "SESI - Ferraz de Vasconcelos, R. Francisco A Zeiler, 20 - Jardim Juliana, Ferraz de Vasconcelos - SP, 08502-310";

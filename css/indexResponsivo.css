@@ -165,16 +165,24 @@
     }
 
     .poppinsBold {
-        font-size: 2.25rem;
+        font-size: 2.15rem;
     }
     .tituloInfo {
         font-size: 1.5rem;
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
     .tituloHeader {
         font-size: 1.8em;
+    }
+
+    .poppinsBold {
+        font-size: 2rem;
+    }
+
+    #dayLabel {
+        font-size: 15px;
     }
 
     #apresTitle {
