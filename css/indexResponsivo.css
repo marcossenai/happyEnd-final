@@ -172,4 +172,14 @@
     }
 }
 
+@media (max-width: 360px) {
+    .tituloHeader {
+        font-size: 1.8em;
+    }
+
+    #apresTitle {
+        font-size: 30px;
+    }
+}
+
 
