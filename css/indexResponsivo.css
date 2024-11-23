@@ -83,6 +83,18 @@
         display: none;
     }
 
+    #apresTitle {
+        margin-bottom: 260px;
+    }
+
+    #titleApresArea {
+        height: 0px;
+    }
+
+    .calendarBoxLeft {
+        margin-top: -120px;
+    }
+
     /* -------------------------- professores ------------------------- */
     .professor {
         width: 75%;
@@ -112,6 +124,18 @@
 @media (max-width: 450px) {
     .calendarBox {
         width: 15rem;
+    }
+
+    #apresTitle {
+        margin-bottom: 380px;
+    }
+
+    #titleApresArea {
+        height: 0px;
+    }
+
+    .calendarBoxLeft {
+        margin-top: -180px;
     }
 
     .btn {
@@ -149,25 +173,3 @@
 }
 
 
-/* .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle .bar {
-    background-color: #000;
-    height: 3px;
-    width: 25px;
-    margin: 3px 0;
-}
-
-.mobile-menu {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.mobile-menu a {
-    display: block;
-} */
