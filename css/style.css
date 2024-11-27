@@ -395,11 +395,11 @@ canvas#backgroundCanvas {
 
 .professor {
     display: flex;
-    background-color: var(--corBgCards);
+    background-color: #666666;
     width: 30%;
     margin: 1%;
     position: relative;
-    justify-content: center;
+    justify-content: center; /* ajuste conforme necessário */
 }
 
 .infoBox-professor {
@@ -453,6 +453,7 @@ canvas#backgroundCanvas {
 .imgProfessor {
     width: 100%;
     pointer-events: none;
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.8))
 }
 
 
