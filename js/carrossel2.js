@@ -16,13 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (isMobile()) {
             setupSingleCard();
         } else {
-            stopAutoScroll(); 
+            stopAutoScroll();
         }
     }
 
     function setupThreeCards() {
         stopAutoScroll();
-        carouselContainer.scrollLeft = 0; 
+        carouselContainer.scrollLeft = 0;
 
         const controlsContainer = document.querySelector(".carousel-controls");
         if (controlsContainer) controlsContainer.remove();
@@ -42,12 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const prevButton = document.createElement("button");
         prevButton.className = "arrow";
-        prevButton.innerHTML = "←"; 
+        prevButton.innerHTML = "←";
         prevButton.addEventListener("click", () => navigateCarousel(-1));
 
         const nextButton = document.createElement("button");
         nextButton.className = "arrow";
-        nextButton.innerHTML = "→"; 
+        nextButton.innerHTML = "→";
         nextButton.addEventListener("click", () => navigateCarousel(1));
 
         controls.appendChild(prevButton);
@@ -56,8 +56,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function navigateCarousel(direction) {
-        const cardWidth = cards[0].offsetWidth; // Usando a largura real do card
-        currentIndex = (currentIndex + direction + cards.length) % cards.length;
+        const cardWidth = cards[0].offsetWidth;
+        currentIndex += direction;
+
+        // Verifica se atingiu o final ou início para ajustar
+        if (currentIndex >= cards.length) {
+            currentIndex = 0; // Reinicia no início
+        } else if (currentIndex < 0) {
+            currentIndex = cards.length - 1; // Volta ao final
+        }
 
         const offset = currentIndex * cardWidth;
         carouselContainer.scrollTo({ left: offset, behavior: "smooth" });
@@ -65,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function startAutoScroll() {
         stopAutoScroll();
-        autoScrollInterval = setInterval(() => navigateCarousel(1), 150000); // 15 segundos
+        autoScrollInterval = setInterval(() => navigateCarousel(1), 20000); // 15 segundos
     }
 
     function stopAutoScroll() {
@@ -107,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         fullscreenImage.src = imageSrc;
         fullscreenOverlay.classList.add("active");
-        header.classList.add("fullscreen-hidden"); 
+        header.classList.add("fullscreen-hidden");
 
         if (window.innerWidth <= 550) {
             fullscreenImage.style.width = "100%";
@@ -125,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         fullscreenOverlay.classList.remove("active");
         fullscreenImage.src = "";
-        header.classList.remove("fullscreen-hidden"); 
+        header.classList.remove("fullscreen-hidden");
     }
 
     cards.forEach(card => {

@@ -106,8 +106,11 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-.caroussel-container {
+#carrousselIdBase {
     width: 90%;
+}
+
+.caroussel-container {
     height: 90vh;
     display: flex;
     flex-wrap: nowrap;
@@ -325,3 +328,7 @@ input:checked + label .description {
     }
 
 }
+
+
+
+
