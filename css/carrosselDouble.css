@@ -294,13 +294,13 @@ input:checked + label .description {
 @media (max-width: 550px) {
     .caroussel-container {
         overflow: hidden;
-        width: 80%;
         height: auto;
         display: flex;
         flex-wrap: nowrap;
         scroll-snap-type: x mandatory;
     }
 
+    
     .card {
         flex: 0 0 100%;
         aspect-ratio: 2 / 3;
@@ -328,7 +328,3 @@ input:checked + label .description {
     }
 
 }
-
-
-
-

@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const carouselContainer = document.querySelector(".caroussel-container");
     const cards = document.querySelectorAll(".card");
     let currentIndex = 0;
-    let autoScrollInterval;
 
     const isDesktop = () => window.innerWidth >= 1280;
     const isMediumScreen = () => window.innerWidth >= 550 && window.innerWidth < 800;
@@ -16,20 +15,18 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (isMobile()) {
             setupSingleCard();
         } else {
-            stopAutoScroll();
+            stopAutoScroll(); 
         }
     }
 
     function setupThreeCards() {
-        stopAutoScroll();
-        carouselContainer.scrollLeft = 0;
+        carouselContainer.scrollLeft = 0; 
 
         const controlsContainer = document.querySelector(".carousel-controls");
         if (controlsContainer) controlsContainer.remove();
     }
 
     function setupSingleCard() {
-        startAutoScroll();
         createControls();
     }
 
@@ -42,12 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const prevButton = document.createElement("button");
         prevButton.className = "arrow";
-        prevButton.innerHTML = "←";
+        prevButton.innerHTML = "←"; 
         prevButton.addEventListener("click", () => navigateCarousel(-1));
 
         const nextButton = document.createElement("button");
         nextButton.className = "arrow";
-        nextButton.innerHTML = "→";
+        nextButton.innerHTML = "→"; 
         nextButton.addEventListener("click", () => navigateCarousel(1));
 
         controls.appendChild(prevButton);
@@ -56,27 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function navigateCarousel(direction) {
-        const cardWidth = cards[0].offsetWidth;
-        currentIndex += direction;
-
-        // Verifica se atingiu o final ou início para ajustar
-        if (currentIndex >= cards.length) {
-            currentIndex = 0; // Reinicia no início
-        } else if (currentIndex < 0) {
-            currentIndex = cards.length - 1; // Volta ao final
-        }
+        const cardWidth = cards[0].offsetWidth; 
+        currentIndex = (currentIndex + direction + cards.length) % cards.length;
 
         const offset = currentIndex * cardWidth;
         carouselContainer.scrollTo({ left: offset, behavior: "smooth" });
-    }
-
-    function startAutoScroll() {
-        stopAutoScroll();
-        autoScrollInterval = setInterval(() => navigateCarousel(1), 20000); // 15 segundos
-    }
-
-    function stopAutoScroll() {
-        clearInterval(autoScrollInterval);
     }
 
     const toggleImagesBtn = document.getElementById("toggleImagesBtn");
@@ -114,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         fullscreenImage.src = imageSrc;
         fullscreenOverlay.classList.add("active");
-        header.classList.add("fullscreen-hidden");
+        header.classList.add("fullscreen-hidden"); 
 
         if (window.innerWidth <= 550) {
             fullscreenImage.style.width = "100%";
@@ -132,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         fullscreenOverlay.classList.remove("active");
         fullscreenImage.src = "";
-        header.classList.remove("fullscreen-hidden");
+        header.classList.remove("fullscreen-hidden"); 
     }
 
     cards.forEach(card => {

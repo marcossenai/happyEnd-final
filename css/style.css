@@ -395,7 +395,7 @@ canvas#backgroundCanvas {
 
 .professor {
     display: flex;
-    background-color: #666666;
+    background-color: #3b3b3b;
     width: 30%;
     margin: 1%;
     position: relative;
